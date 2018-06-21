@@ -18,6 +18,7 @@ import java.util.Date;
  * 
  * @author dtz
  *
+ *服务启动 ：./soffice "-accept=socket,host=localhost,port=8100;urp;StarOffice.ServiceManager" -nologo -headless -nofirststartwizard &
  */
 public class Doc2HtmlUtils {
 	private static Doc2HtmlUtils doc2HtmlUtil;
@@ -123,7 +124,7 @@ public class Doc2HtmlUtils {
 		} else if ("xls".equals(type)) {
 			docFileName = "xls_" + timesuffix + ".xls";
 			htmFileName = "xls_" + timesuffix + ".pdf";
-		} else if ("ppt".equals(type)) {
+		} else if ("ppt".equals(type)||type.contains("ppt")) {
 			docFileName = "ppt_" + timesuffix + ".ppt";
 			htmFileName = "ppt_" + timesuffix + ".pdf";
 		} else {

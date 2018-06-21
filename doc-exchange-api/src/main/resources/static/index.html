@@ -5,10 +5,23 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <title>预览</title>
 <script type="text/javascript">
-
+$(function(){
+	$.ajax({
+		url : '/exchange',
+		type : "POST",
+		data : {
+			url:"http://47.98.253.246:8080/group1/M00/00/00/rBCh-Fr6-iGALkVaAAM0AAEV0Zc776.doc"
+		},
+		success : function(data) {
+			alert(data);
+			$("#content").html('<iframe id="displayPdfIframe" width="50%" height="500px" src="master/view/viewer.html?file='+data+'"></iframe>');
+		}
+});
+})
 </script>
 </head>
 <body>
-  <iframe id="displayPdfIframe" width="50%" height="500px" src="master/view/viewer.html?file=http://47.98.253.246:8080/group1/M00/00/04/rBCh-FsiDsaAVkmLACy4GIivSes974.pdf"></iframe>
+<div id="content"></div>
+<!--   <iframe id="displayPdfIframe" width="50%" height="500px" src="master/view/viewer.html?file=http://47.98.253.246:8080/group1/M00/00/04/rBCh-FsiDsaAVkmLACy4GIivSes974.pdf"></iframe> -->
 </body>
 </html>

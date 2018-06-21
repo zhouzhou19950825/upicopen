@@ -47,7 +47,7 @@ public class FastDFSTest {
 	public static void delete() throws Exception {
 		int result;
 		// @formatter:off
-		 String fileId = "group1/M00/00/00/ChUKd1rIZseAHp8MAA7tw3atOv8828.jpg";
+		 String fileId = "group1/M00/00/04/rBCh-FsnXqGAaC7CACw9LNSSmVo553.pdf";
 		result = FastDFSClient.deleteFile(fileId);
 		// @formatter:on
 
@@ -61,9 +61,9 @@ public class FastDFSTest {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
-		upload();
+//		upload();
 //		download();
-//		delete();
+		delete();
 
 	}
 

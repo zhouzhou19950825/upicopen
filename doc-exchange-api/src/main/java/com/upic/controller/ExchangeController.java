@@ -19,7 +19,7 @@ import com.upic.test.FastDFSClient;
 public class ExchangeController {
 	protected static final Logger LOGGER = LoggerFactory.getLogger(ExchangeController.class);
 	
-	private static final String BASE_URL="http://10.21.10.119:8080/";
+	private static final String BASE_URL="http://47.98.253.246:8080/";
 	
 	private static final String DIR="data";
 	
@@ -47,9 +47,9 @@ public class ExchangeController {
 		return null;
 	}
 	private String saveExchange(String url) throws IOException {
-		Doc2HtmlUtils coc2HtmlUtil = Doc2HtmlUtils.getDoc2HtmlUtilInstance();
+		Doc2HtmlUtils coc2HtmlUtil = Doc2HtmlUtils.getDoc2HtmlUtilInstance();;
 		InputStream downloadFile = FastDFSClient.downloadFile(url.split(BASE_URL)[1]);
-		String file2pdf = coc2HtmlUtil.file2pdf(downloadFile, DIR, url.split(".")[1], "10.21.10.120", 8100);
+		String file2pdf = coc2HtmlUtil.file2pdf(downloadFile, DIR, url.substring(url.lastIndexOf(".") + 1), "127.0.0.1", 8100);
 		System.out.println(file2pdf);
 		File file = new File(DIR+"/"+file2pdf);
 		String uploadFile = FastDFSClient.uploadFile(file, file2pdf);

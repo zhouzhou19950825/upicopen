@@ -1,24 +1,24 @@
-[INFO ][20180614 10:20:43,283][FastDFSClient:39] === CONF_FILENAME:/fdfs/fdfs_client.conf
-[ERROR][20180614 10:20:43,288][FastDFSClient:52] java.io.FileNotFoundException: \fdfs\fdfs_client.conf (系统找不到指定的路径。)
-[ERROR][20180614 10:20:43,289][FastDFSClient:79] java.io.FileNotFoundException: ‪C:\Users\dtz\Desktop\1.pptx (文件名、目录名或卷标语法不正确。)
-[INFO ][20180614 10:21:06,603][FastDFSClient:39] === CONF_FILENAME:fdfs/fdfs_client.conf
-[ERROR][20180614 10:21:06,607][FastDFSClient:52] java.io.FileNotFoundException: fdfs\fdfs_client.conf (系统找不到指定的路径。)
-[ERROR][20180614 10:21:06,608][FastDFSClient:79] java.io.FileNotFoundException: ‪C:\Users\dtz\Desktop\1.pptx (文件名、目录名或卷标语法不正确。)
-[INFO ][20180614 10:21:38,216][FastDFSClient:39] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
-[ERROR][20180614 10:21:38,274][FastDFSClient:79] java.io.FileNotFoundException: ‪C:\Users\dtz\Desktop\1.pptx (文件名、目录名或卷标语法不正确。)
-[INFO ][20180614 10:22:30,698][FastDFSClient:39] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
-[INFO ][20180614 10:41:43,056][FastDFSClient:38] === CONF_FILENAME:fdfs/fdfs_client.conf
-[ERROR][20180614 10:41:43,064][FastDFSClient:51] java.io.FileNotFoundException: fdfs\fdfs_client.conf (系统找不到指定的路径。)
-[ERROR][20180614 10:41:43,066][FastDFSClient:173] java.lang.NullPointerException
-[INFO ][20180614 10:42:03,085][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
-[INFO ][20180614 10:47:23,136][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
-[INFO ][20180614 10:48:56,767][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
-[INFO ][20180614 10:50:18,364][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
-[INFO ][20180614 11:28:16,849][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
-[ERROR][20180614 11:28:17,353][FastDFSClient:173] java.lang.NullPointerException
-[INFO ][20180614 11:29:45,304][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
-[ERROR][20180614 11:29:45,510][FastDFSClient:173] java.lang.NullPointerException
-[INFO ][20180614 11:29:59,857][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
-[INFO ][20180614 11:30:42,945][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
-[INFO ][20180614 14:38:39,109][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
-[INFO ][20180614 14:43:45,382][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 07:23:14,486][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 07:23:40,278][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 07:33:01,397][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[ERROR][20180619 07:33:01,432][FastDFSClient:75] java.io.FileNotFoundException: /Users/dongtengzhou/j2eeworkspace/javabaseworkspace/upicopen/doc-exchange-api/datadoc_20180619073115.pdf (No such file or directory)
+[INFO ][20180619 08:37:46,321][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 08:40:11,640][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 08:43:04,642][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 08:45:03,058][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 08:48:01,812][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 08:56:04,883][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 08:57:18,097][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 08:58:17,969][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 08:59:15,754][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 09:00:55,018][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 09:04:04,964][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 09:07:28,530][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 09:09:07,196][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 09:11:47,154][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 09:12:11,683][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 09:12:29,580][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 09:29:01,765][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 09:29:32,243][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 09:30:50,663][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf
+[INFO ][20180619 09:31:06,692][FastDFSClient:38] === CONF_FILENAME:src/main/resources/fdfs/fdfs_client.conf

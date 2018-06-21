@@ -1,5 +1,15 @@
 package com.upic.utils;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ConnectException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import com.artofsolving.jodconverter.DefaultDocumentFormatRegistry;
 import com.artofsolving.jodconverter.DocumentConverter;
 import com.artofsolving.jodconverter.DocumentFormat;
@@ -7,12 +17,6 @@ import com.artofsolving.jodconverter.openoffice.connection.OpenOfficeConnection;
 import com.artofsolving.jodconverter.openoffice.connection.SocketOpenOfficeConnection;
 import com.artofsolving.jodconverter.openoffice.converter.OpenOfficeDocumentConverter;
 import com.upic.test.FastDFSClient;
-
-import java.io.*;
-import java.net.ConnectException;
-import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * 
@@ -162,11 +166,24 @@ public class Doc2HtmlUtils {
 			System.err.println("文件转换出错，请检查OpenOffice服务是否启动。");
 		}
 		// convert
-		DocumentConverter converter = new OpenOfficeDocumentConverter(connection);
-		converter.convert(docInputFile, htmlOutputFile);
-		connection.disconnect();
-		// 转换完之后删除word文件
-		docInputFile.delete();
+		try {
+			DocumentConverter converter = new OpenOfficeDocumentConverter(connection);
+			converter.convert(docInputFile, htmlOutputFile);
+			connection.disconnect();
+			// 转换完之后删除word文件
+			docInputFile.delete();
+		} catch (Exception e) {
+			if (htmlOutputFile != null) {
+				htmlOutputFile.delete();
+			}
+			e.printStackTrace();
+		} finally {
+			if (connection != null) {
+				connection.disconnect();
+				connection = null;
+			}
+		}
+
 		return htmFileName;
 	}
 
@@ -209,12 +226,16 @@ public class Doc2HtmlUtils {
 			DocumentConverter converter = new OpenOfficeDocumentConverter(connection);
 			converter.convert(inputStream, docFormat, outputStream, pdfFormat);
 		} catch (ConnectException e) {
+			if (targetF != null) {
+				targetF.delete();
+			}
 			e.printStackTrace();
 		} finally {
 			if (connection != null) {
 				connection.disconnect();
 				connection = null;
 			}
+
 		}
 	}
 
@@ -293,27 +314,30 @@ public class Doc2HtmlUtils {
 		// br.close();
 
 		Doc2HtmlUtils coc2HtmlUtil = getDoc2HtmlUtilInstance();
-		// String a = "D:\\poi-test\\exportExcel.xls";
-		// String b = "D:\\poi-test\\exportExcel.pdf";
-		// InputStream inputStream = new FileInputStream(a);
+		 String a = "data/1.pptx";
+//		 String b = "D:\\poi-test\\exportExcel.pdf";
+		 InputStream downloadFile = new FileInputStream(a);
 		// OutputStream outputStream = new FileOutputStream(b);
 		// coc2HtmlUtil.fileConvertPdf(inputStream,outputStream,"xls");
-
-//		File file = null;
-//		FileInputStream fileInputStream = null;
-//
-//		file = new File("e:\\Temp\\testoffice\\2.ppt");
-//		fileInputStream = new FileInputStream(file);
+		// File file = null;
+		// FileInputStream fileInputStream = null;
+		//
+		// file = new File("e:\\Temp\\testoffice\\2.ppt");
+		// fileInputStream = new FileInputStream(file);
 		// coc2HtmlUtil.file2Html(fileInputStream, "D:/poi-test/openOffice/xls","xls");
 		// (InputStream fromFileInputStream, String toFilePath,String type,String
 		// host,int port)
-		InputStream downloadFile = FastDFSClient.downloadFile("group1/M00/00/04/rBCh-Fsh0XyAZgQUAMaCCumxkgA12.pptx");
-		String file2pdf = coc2HtmlUtil.file2pdf(downloadFile, "data", "ppt", "127.0.0.1", 8100);
+		// group1/M00/00/04/rBCh-Fsh0XyAZgQUAMaCCumxkgA12.pptx
+		// group1/M00/00/00/rBCh-Fr6-iGALkVaAAM0AAEV0Zc776.doc
+//		InputStream downloadFile = FastDFSClient.downloadFile("group1/M00/00/00/rBCh-Fr6-iGALkVaAAM0AAEV0Zc776.doc");
+		String file2pdf = coc2HtmlUtil.file2pdf(downloadFile, "data/", "ppt", "127.0.0.1", 8100);
 		System.out.println(file2pdf);
-		File file = new File("data/"+file2pdf);
-		String uploadFile = FastDFSClient.uploadFile(file, file2pdf);
-		System.out.println(uploadFile);
-		file.delete();
+		// File file = new
+		// File("/Users/dongtengzhou/j2eeworkspace/javabaseworkspace/upicopen/doc-exchange-api/data/"
+		// + file2pdf);
+		// String uploadFile = FastDFSClient.uploadFile(file, file2pdf);
+		// System.out.println(uploadFile);
+		// file.delete();
 		/*
 		 * file = new File("D:/poi-test/test.doc"); fileInputStream = new
 		 * FileInputStream(file); // coc2HtmlUtil.file2Html(fileInputStream,
